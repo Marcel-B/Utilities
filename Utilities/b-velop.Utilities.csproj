@@ -9,6 +9,7 @@
     <Copyright>2020</Copyright>
     <Owners>Marcel Benders</Owners>
     <Title>Utilities</Title>
+    <ReleaseVersion>1.0</ReleaseVersion>
   </PropertyGroup>
 
   <ItemGroup>
