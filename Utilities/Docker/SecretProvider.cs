@@ -20,8 +20,8 @@ namespace com.b_velop.Utilities.Docker
                     using var streamReader = new StreamReader(stream);
                     return streamReader.ReadToEnd();
                 }
-            }
+        }
             return Environment.GetEnvironmentVariable(key);
         }
-    }
+}
 }

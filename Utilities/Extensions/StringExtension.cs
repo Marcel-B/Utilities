@@ -32,7 +32,7 @@ namespace com.b_velop.Utilities.Extensions
             {
                 result += FirstUp(str) + "-";
             }
-            result = result[0..^1];
+            result = result.Substring(0, result.Length - 1);
             return result;
         }
     }
