@@ -4,12 +4,15 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>com.b_velop.Utilities</RootNamespace>
     <PackOnBuild>true</PackOnBuild>
-    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackageVersion>2.2.1.0</PackageVersion>
     <Authors>Marcel Benders</Authors>
     <Copyright>2020</Copyright>
     <Owners>Marcel Benders</Owners>
     <Title>Utilities</Title>
     <ReleaseVersion>1.0</ReleaseVersion>
+    <Company>b-velop</Company>
+    <PackageDescription>This package adds an Octocat!</PackageDescription>
+    <RepositoryUrl>https://github.com/Marcel-B/Utilities</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
