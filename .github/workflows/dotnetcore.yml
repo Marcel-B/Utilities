@@ -25,6 +25,7 @@ jobs:
     - name: Publish to Nexus
       env:
         super_secret: ${{ secrets.NEXUS }}
-      run: dotnet nuget push -s https://nexus.qaybe.de/repository/nuget-hosted/ -k $super_secret *.nupkg
+      #run: dotnet nuget push -s https://nexus.qaybe.de/repository/nuget-hosted/ -k $super_secret *.nupkg
+      run: dotnet nuget push "*.nupkg" --source "github"
     - name: Clean Packages
       run: rm *.nupkg
