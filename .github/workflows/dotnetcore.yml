@@ -28,7 +28,7 @@ jobs:
     - name: Publish to Nuget
       env:
         nuget_secret: ${{ secrets.NUGET }}
-      run: dotnet nuget push "*.nupkg" -k $nuget_secret -s https://api.nuget.org/v3/index.json --skip-duplicate --timeout 360
+      run: dotnet nuget push *.nupkg -k $nuget_secret -s https://api.nuget.org/v3/index.json --skip-duplicate --timeout 360
   
     - name: Publish to GitHub
       env:
