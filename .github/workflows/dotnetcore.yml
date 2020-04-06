@@ -27,12 +27,12 @@ jobs:
       run: dotnet pack -p:PackageVersion=2.1.2 -c Release -o ./
     - name: Publish to Nuget
       env:
-       nuget_secret: ${{ secrets.NUGET }}
-      run: dotnet nuget push "*.nupkg" -k $nuget_secret -s https://api.nuget.org/v3/index.json
+        nuget_secret: ${{ secrets.NUGET }}
+      run: dotnet nuget push "*.nupkg" -k $nuget_secret -s https://api.nuget.org/v3/index.json --timeout 360
   
-    - name: Publish to Nexus
+    - name: Publish to GitHub
       env:
-       super_secret: ${{ secrets.NEXUS }}
+        super_secret: ${{ secrets.NEXUS }}
       #run: dotnet nuget push -s https://nexus.qaybe.de/repository/nuget-hosted/ -k $super_secret *.nupkg
       run: dotnet nuget push "*.nupkg" --skip-duplicate --no-symbols true
     - name: Clean Packages
